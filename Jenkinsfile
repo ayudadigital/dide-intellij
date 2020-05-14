@@ -48,10 +48,10 @@ pipeline {
                 buildAndPublishDockerImage()
                 jplMakeRelease(cfg, true)
             }
-        }
-        post {
-            cleanup {
-                deleteDir()
+            post {
+                cleanup {
+                    deleteDir()
+                }
             }
         }
     }
